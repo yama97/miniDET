@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: miniDET
+message: "If you use this software, please cite this repository."
+type: software
+
+authors:
+  - family-names: Yamamoto
+    given-names: Seiichi
+
+repository-code: "https://github.com/yama97/miniDET"
+
+license: BSD-3-Clause
+
+version: "1.0"
+
+date-released: 2026-07-16
+
+abstract: >
+  miniDET is a lightweight experimental implementation of a subset
+  of the Deterministic Networking (DetNet) Packet Replication,
+  Elimination, and Ordering Functions (PREOF) for commodity IP
+  networks.
+
+keywords:
+  - DetNet
+  - PREOF
+  - containerlab
+  - networking
+  - reproducibility
