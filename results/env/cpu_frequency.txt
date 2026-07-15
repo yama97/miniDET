@@ -1,0 +1,11 @@
+===== CPU frequency governor =====
+/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu1/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu2/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu3/cpufreq/scaling_governor: powersave
+
+===== CPU current frequency =====
+/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: 1400043
+/sys/devices/system/cpu/cpu1/cpufreq/scaling_cur_freq: 1399473
+/sys/devices/system/cpu/cpu2/cpufreq/scaling_cur_freq: 1400015
+/sys/devices/system/cpu/cpu3/cpufreq/scaling_cur_freq: 1399992
