@@ -37,9 +37,7 @@ PREOF subset that focuses on packet replication and duplicate elimination.
 ├── prf.py                     Packet Replication Function
 ├── pef-history.py             Packet Elimination Function
 ├── scripts/                   Experiment scripts
-├── results/                   Example experimental results
-├── MANIFEST.txt               Artifact contents
-└── SHA256SUMS.txt             SHA-256 checksums
+└── results/                   Example experimental results
 ```
 
 ---
