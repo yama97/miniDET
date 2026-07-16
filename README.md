@@ -18,7 +18,7 @@ elimination.
 ## miniDET Overview
 
 <p align="center">
-<img src="docs/minidet-overview.png" width="700">
+<img src="docs/minidet-overview.png">
 </p>
 
 **Figure 1.**
@@ -27,7 +27,7 @@ Overview of the proposed miniDET architecture.
 ## PREOF Concept
 
 <p align="center">
-  <img src="docs/preof-overview.png" width="700">
+  <img src="docs/preof-overview.png">
 </p>
 
 **Figure 2.**
