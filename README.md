@@ -15,14 +15,14 @@ elimination.
 
 ---
 
-## miniDET Overview
+## Proposed miniDET Architecture
 
 <p align="center">
 <img src="docs/minidet-overview.png" alt="miniDET architecture">
 </p>
 
 **Figure 1.**
-Overview of the proposed miniDET architecture.
+Proposed lightweight PREOF subset implemented by miniDET.
 
 ## PREOF Concept
 
@@ -31,7 +31,7 @@ Overview of the proposed miniDET architecture.
 </p>
 
 **Figure 2.**
-Conceptual PREOF packet processing.
+Standard DetNet PREOF packet processing (RFC 8655).
 
 ---
 
