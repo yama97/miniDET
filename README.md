@@ -24,7 +24,7 @@ elimination.
 **Figure 1.**
 Proposed lightweight PREOF subset implemented by miniDET.
 
-## PREOF Concept
+## Background: PREOF Concept
 
 <p align="center">
   <img src="docs/preof-overview.png" alt="PREOF concept">
