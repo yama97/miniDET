@@ -4,14 +4,14 @@
 Deterministic Networking (DetNet) Packet Replication, Elimination, and Ordering
 Functions (PREOF) for commodity IP networks.
 
-This repository contains the source code and containerlab-based experimental
-environment used in the following paper:
+This repository accompanies the paper:
 
 > **miniDET: A Lightweight Experimental Implementation of a DetNet PREOF Subset for Commodity IP Networks**
 
 miniDET is intended for education, experimentation, and reproducible research.
-Rather than implementing the complete DetNet architecture, it provides a minimal
-PREOF subset that focuses on packet replication and duplicate elimination.
+Rather than implementing the complete DetNet architecture, it provides a
+minimal PREOF subset that focuses on packet replication and duplicate
+elimination.
 
 ---
 
@@ -21,8 +21,8 @@ PREOF subset that focuses on packet replication and duplicate elimination.
 - Packet Replication Function (PRF)
 - Packet Elimination Function (PEF)
 - Containerlab-based experimental topology
-- Reproducible evaluation scripts
-- Sample experimental results
+- Reproducible experiment scripts
+- Example experimental results
 
 ---
 
@@ -30,88 +30,138 @@ PREOF subset that focuses on packet replication and duplicate elimination.
 
 ```
 .
-├── Dockerfile                 Docker image definition
-├── preof.clab.yml             Containerlab topology
-├── sender-flow.py             Packet sender
-├── receiver-flow.py           Packet receiver
-├── prf.py                     Packet Replication Function
-├── pef-history.py             Packet Elimination Function
-├── scripts/                   Experiment scripts
-└── results/                   Example experimental results
+├── Dockerfile
+├── preof.clab.yml
+├── sender-flow.py
+├── receiver-flow.py
+├── prf.py
+├── prf-onepath.py
+├── pef-history.py
+├── scripts/
+├── results/
+├── fig-minidet-topology.pdf
+├── LICENSE
+└── README.md
 ```
 
 ---
 
 # Requirements
 
-The experiments were developed and tested with:
+The experiments were tested with:
 
 - Ubuntu 24.04 LTS
 - Docker Engine 29.x
-- containerlab 0.75
+- containerlab 0.77 or later
 - Python 3.12
 
-See `results/env/environment.txt` for the complete software environment.
+The following software must be installed before running the experiments:
+
+- Docker Engine
+- containerlab
+
+Installation instructions are available from the official websites:
+
+- Docker: https://docs.docker.com/engine/install/
+- containerlab: https://containerlab.dev/install/
 
 ---
 
 # Quick Start
 
-Build the Docker image:
+Clone the repository.
 
 ```bash
-docker build -t detnet-preof-lab:ubuntu24 .
+git clone https://github.com/yama97/miniDET.git
+cd miniDET
 ```
 
-Deploy the topology:
+Build the Docker image.
+
+```bash
+sudo docker build -t detnet-preof-lab:ubuntu24 .
+```
+
+Deploy the containerlab topology.
 
 ```bash
 sudo containerlab deploy -t preof.clab.yml
 ```
 
-Run the experiments:
+Verify that all containers are running.
 
 ```bash
-./scripts/run-batch.sh
+sudo docker ps
 ```
 
-Analyze the results:
+You should see the following six containers.
 
-```bash
-./scripts/analyze-run.py
+```
+clab-preof-h1
+clab-preof-prf
+clab-preof-r1
+clab-preof-r2
+clab-preof-pef
+clab-preof-h2
 ```
 
-Remove the topology:
+Run the experiments.
 
 ```bash
-sudo containerlab destroy -t preof.clab.yml
+sudo ./scripts/run-batch.sh
+```
+
+Analyze an individual experiment.
+
+```bash
+python3 ./scripts/analyze-run.py \
+results/<experiment-directory>
+```
+
+Remove the topology.
+
+```bash
+sudo containerlab destroy -t preof.clab.yml --cleanup
 ```
 
 ---
 
 # Experimental Results
 
-The `results/` directory contains example outputs used in the paper, including:
+Example experiment results are included in the `results/` directory.
+
+The analysis scripts generate:
 
 - packet delivery rate
 - residual packet loss
 - duplicate packet statistics
-- generated figures
-- summary CSV files
+- CSV summaries
+- publication-quality figures
+
+---
+
+# Notes
+
+The Python programs (`sender-flow.py`, `prf.py`,
+`prf-onepath.py`, `pef-history.py`, and
+`receiver-flow.py`) are mounted into the appropriate
+containers by `preof.clab.yml`.
+
+No manual `docker cp` operations are required.
 
 ---
 
 # Reproducibility
 
-This repository contains the complete artifact used to generate the results
-reported in the accompanying paper, including:
+This repository contains the complete artifact used in the
+paper, including
 
 - source code
-- containerlab topology
 - Docker environment
+- containerlab topology
 - experiment scripts
-- plotting scripts
-- representative experimental results
+- analysis scripts
+- representative experiment results
 
 ---
 
@@ -125,6 +175,4 @@ BSD 3-Clause License.
 
 If you use miniDET in your research, please cite the accompanying paper.
 
-```bibtex
-(To be added after publication.)
-```
+(Bibliographic information will be added after publication.)
