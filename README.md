@@ -21,6 +21,18 @@ elimination.
 <img src="docs/minidet-overview.png" width="700">
 </p>
 
+**Figure 1.**
+Overview of the proposed miniDET architecture.
+
+## PREOF Concept
+
+<p align="center">
+  <img src="docs/preof-overview.png" width="700">
+</p>
+
+**Figure 2.**
+Conceptual PREOF packet processing.
+
 ---
 
 # Features
@@ -155,7 +167,8 @@ sudo containerlab destroy -t preof.clab.yml --cleanup
 <img src="docs/topology.png" width="700">
 </p>
 
-
+**Figure 3.**
+Containerlab-based experimental topology.
 
 ---
 
