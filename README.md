@@ -23,14 +23,6 @@ elimination.
 
 ---
 
-## PREOF Concept
-
-<p align="center">
-<img src="docs/preof-overview.png" width="700">
-</p>
-
----
-
 # Features
 
 - User-space Python implementation
@@ -55,6 +47,7 @@ elimination.
 ├── pef-history.py
 ├── scripts/
 ├── results/
+├── docs/
 ├── fig-minidet-topology.pdf
 ├── LICENSE
 └── README.md
