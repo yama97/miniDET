@@ -15,6 +15,22 @@ elimination.
 
 ---
 
+## miniDET Overview
+
+<p align="center">
+<img src="docs/minidet-overview.png" width="700">
+</p>
+
+---
+
+## PREOF Concept
+
+<p align="center">
+<img src="docs/preof-overview.png" width="700">
+</p>
+
+---
+
 # Features
 
 - User-space Python implementation
@@ -139,6 +155,17 @@ sudo containerlab destroy -t preof.clab.yml --cleanup
 ```
 
 ---
+
+## Experimental Topology
+
+<p align="center">
+<img src="docs/topology.png" width="700">
+</p>
+
+
+
+---
+
 
 # Experimental Results
 
