@@ -76,10 +76,24 @@ git clone https://github.com/yama97/miniDET.git
 cd miniDET
 ```
 
-Build the Docker image.
+Ensure that the Docker daemon is running.
+
+```bash
+sudo systemctl start docker
+```
+
+Build the local Docker image used by the experiment nodes.
 
 ```bash
 sudo docker build -t detnet-preof-lab:ubuntu24 .
+```
+
+If the repository was downloaded as a ZIP archive and the scripts are not executable, restore the executable permissions.
+
+```bash
+chmod +x *.py
+chmod +x scripts/*.sh
+chmod +x scripts/*.py
 ```
 
 Deploy the containerlab topology.
@@ -142,10 +156,16 @@ The analysis scripts generate:
 
 # Notes
 
-The Python programs (`sender-flow.py`, `prf.py`,
-`prf-onepath.py`, `pef-history.py`, and
-`receiver-flow.py`) are mounted into the appropriate
-containers by `preof.clab.yml`.
+The experiment programs
+
+- sender-flow.py
+- prf.py
+- prf-onepath.py
+- pef-history.py
+- receiver-flow.py
+
+are automatically mounted into the appropriate containers by
+`preof.clab.yml`.
 
 No manual `docker cp` operations are required.
 
