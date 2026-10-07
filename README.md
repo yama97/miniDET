@@ -206,6 +206,28 @@ BSD 3-Clause License.
 
 # Citation
 
-If you use miniDET in your research, please cite the accompanying paper.
+If you use miniDET in your research, please cite the following paper:
 
-(Bibliographic information will be added after publication.)
+> S. Yamamoto and K. Fukuda,  
+> “miniDET: A Lightweight Experimental Implementation of a DetNet PREOF Subset for Commodity IP Networks,”  
+> in *2026 4th International Conference on Advanced Network Technologies and Applications (APAN)*, Auckland, New Zealand, 2026, pp. 1–6,  
+> doi: [10.1109/APAN70967.2026.11709678](https://doi.org/10.1109/APAN70967.2026.11709678).
+
+IEEE Xplore: https://ieeexplore.ieee.org/document/11709678
+
+
+## BibTeX
+
+```bibtex
+@INPROCEEDINGS{11709678,
+  author={Yamamoto, Seiichi and Fukuda, Kensuke},
+  booktitle={2026 4th International Conference on Advanced Network Technologies and Applications (APAN)},
+  title={miniDET: A Lightweight Experimental Implementation of a DetNet PREOF Subset for Commodity IP Networks},
+  year={2026},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Sequences;Sequential analysis;Radio access networks;Regional area networks;History;Fluid flow;Packet loss;IP networks;Design methodology;Linux;Deterministic Networking (DetNet);Packet Replication;Elimination;Ordering Functions (PREOF);packet delivery;residual packet loss;Research and Education Networks (REN);containerlab;reproducibility},
+  doi={10.1109/APAN70967.2026.11709678}
+}
+
