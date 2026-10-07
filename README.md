@@ -46,26 +46,6 @@ Standard DetNet PREOF packet processing (RFC 8655).
 
 ---
 
-# Repository Structure
-
-```
-.
-├── Dockerfile
-├── preof.clab.yml
-├── sender-flow.py
-├── receiver-flow.py
-├── prf.py
-├── prf-onepath.py
-├── pef-history.py
-├── scripts/
-├── results/
-├── docs/
-├── fig-minidet-topology.pdf
-├── LICENSE
-└── README.md
-```
-
----
 
 # Requirements
 
